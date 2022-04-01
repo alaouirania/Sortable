@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Superheros</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+        <script src="script.js"></script>
+        <script src="search.js"></script>
+    </head>
+    <body>
+        <br>
+        <img id="logo" src="img/logo.png" alt="">
+
+        <img id="searchimg" src="img/search.png" alt="">
+        <div id="left">
+        <input type="search" placeholder="Search a Hero... " class="search-input" data-table="heroclass"/>
+    </div><br>
+    
+    <div id="right">
+        <select name="page" id="pages" onchange="myFunc()">
+            <option value="10">10 items</option>
+            <option value="20" selected>20 items</option>
+            <option value="50">50 items</option>
+            <option value="100">100 pages</option>
+            <option value="0">all results</option>
+        </select>
+    </div><br>
+    <br>
+    <br>
+    <table id="tablehero" class=" table heroclass">
+            <thead id="thead" >
+            <tr>
+                <th onclick="sortBy(0)">Icon</th>
+                <th onclick="sortBy(1)">Name</th>
+                <th onclick="sortBy(2)">Fullname</th>
+                <th onclick="sortBy(3)">Powerstats</th>
+                <th onclick="sortBy(4)">Race</th>
+                <th onclick="sortBy(5)">Gender</th>
+                <th onclick="sortBy(6)">Height</th>
+                <th onclick="sortBy(7)">Weight</th>
+                <th onclick="sortBy(8)">Place Of Birth</th>
+                <th onclick="sortBy(9)">Alignement</th>
+            </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+        <br><br>
+        <div class="pagination-block">
+            <span class="pageButton outline-none" id="button_prev"><button>Prev</button></span>
+            <span id="page_number" class="outline-none"><button ></button></span>
+            <span class="pageButton outline-none" id="button_next"><button>Next</button></span>
+        </div><br>
+        <br>
+        <br>
+       
+        
+    </body>
+</html>
